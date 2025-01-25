@@ -13,5 +13,6 @@ xp = np.linspace(0, 7, 100)
 
 plb.plot(xp, p4(xp), c='r')
 
+
 plb.scatter(pageSpeeds, purchaseAmount)
 plb.show()
