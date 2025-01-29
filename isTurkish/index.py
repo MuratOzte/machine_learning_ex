@@ -25,7 +25,7 @@ targets = data['language'].values
 
 classifier.fit(count,targets)
 
-examples = ['Merhaba Ben Murat','hello my name is murat']
+examples = ['Merhaba Ben Murat','hello my name is murat','Sakız Çiğnedim']
 exampleCounts = vectorizer.transform(examples)
 predictions = classifier.predict(exampleCounts)
 print(predictions)
