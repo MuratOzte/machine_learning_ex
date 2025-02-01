@@ -4,6 +4,7 @@ from datas import age_income_activity, activity_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import xgboost as xgb
+import numpy as np
 
 x_train, x_test, y_train, y_test = train_test_split(
     age_income_activity, activity_score, test_size=0.2, random_state=0)
@@ -25,4 +26,9 @@ predictions = model.predict(test)
 print(predictions)
 print(accuracy_score(y_test, predictions))
 
-print(Counter(y_train))  # Her sınıfın kaç kez geçtiğini gör
+exs = np.array([[30,80000, 50]])
+
+predict = model.predict(xgb.DMatrix(exs))
+print(predict)
+
+print(Counter(y_train))
