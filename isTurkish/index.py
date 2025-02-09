@@ -23,11 +23,9 @@ count = vectorizer.fit_transform(data['message'].values)
 classifier = MultinomialNB()
 targets = data['language'].values
 
-classifier.fit(count,targets)
+classifier.fit(count, targets)
 
-examples = ['Merhaba Ben Murat','hello my name is murat','Sakız Çiğnedim']
+examples = ['Merhaba Ben Murat', 'hello my name is murat', 'Sakız Çiğnedim']
 exampleCounts = vectorizer.transform(examples)
 predictions = classifier.predict(exampleCounts)
 print(predictions)
-
-
